@@ -14,7 +14,7 @@ tokenizer = AutoTokenizer.from_pretrained("src/Mistral-7B-v0.1-qagen-v0.6-4bit",
 
 
 def generate(prompt):
-    return (tokenizer.decode(model.generate(**tokenizer("auto_gptq is", return_tensors="pt").to(model.device))[0]))
+    return (tokenizer.decode(model.generate(**tokenizer(prompt, return_tensors="pt").to(model.device))[0]))
 
 
 
