@@ -22,6 +22,13 @@ RUN python3.11 -m pip install --upgrade pip && \
 # NOTE: The base image comes with multiple Python versions pre-installed.
 #       It is reccommended to specify the version of Python when running your code.
 
+# Install Git and Git LFS
+RUN apt-get update && apt-get install -y git && \
+    curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash && \
+    apt-get install -y git-lfs && \
+    git lfs install
+
+RUN git clone https://huggingface.co/vpgits/Mistral-7B-v0.1-qagen-v0.6-4bit /src
 
 # Add src files (Worker Template)
 ADD src .
