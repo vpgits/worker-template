@@ -29,6 +29,7 @@ RUN apt-get update && apt-get install -y git && \
     git lfs install
 
 RUN git clone https://huggingface.co/vpgits/Mistral-7B-v0.1-qagen-v0.6-4bit /src
+RUN git lfs pull
 
 # Add src files (Worker Template)
 ADD src .
