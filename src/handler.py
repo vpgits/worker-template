@@ -2,7 +2,7 @@
 
 import runpod
 import torch
-from auto_gptq import AutoGPTQForCausalLM, TextGenerationPipeline
+from auto_gptq import AutoGPTQForCausalLM
 from transformers import AutoTokenizer
 
 # If your handler runs inference on a model, load the model here.
