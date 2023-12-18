@@ -8,8 +8,8 @@ from transformers import AutoTokenizer
 # If your handler runs inference on a model, load the model here.
 # You will want models to be loaded into memory before starting serverless.
 
-model = AutoGPTQForCausalLM.from_quantized("Mistral-7B-v0.1-qagen-v0.6-4bit")
-tokenizer = AutoTokenizer.from_pretrained("Mistral-7B-v0.1-qagen-v0.6-4bit", use_fast=True)
+model = AutoGPTQForCausalLM.from_quantized("/src/Mistral-7B-v0.1-qagen-v0.6-4bit")
+tokenizer = AutoTokenizer.from_pretrained("/src/Mistral-7B-v0.1-qagen-v0.6-4bit", use_fast=True)
 
 
 
